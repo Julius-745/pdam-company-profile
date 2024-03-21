@@ -10,7 +10,7 @@ interface ILayout {
 
 const Layout: React.FC<ILayout> = (props) => {
   return (
-    <Box overflow={"auto"}>
+    <Box overflow={"auto"} minW={"100%"}>
       <Navbar data={Navigation} />
       <Box mt={60}>{props.children}</Box>
       <Footer />

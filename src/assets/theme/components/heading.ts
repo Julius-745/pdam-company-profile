@@ -1,7 +1,7 @@
 import { defineStyle, defineStyleConfig } from "@chakra-ui/styled-system";
-import "@fontsource/unlock";
+import "@fontsource/poppins";
 const baseStyle = defineStyle({
-  fontFamily: "Unlock",
+  fontFamily: "poppins",
   letterSpacing: "2px",
   fontWeight: "bold",
 });
