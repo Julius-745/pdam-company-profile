@@ -1,4 +1,4 @@
-import { VStack, Image, Text, Heading, Stack, HStack, Flex, Center, Button, Link, Card} from "@chakra-ui/react";
+import {  Heading, HStack, Center,} from "@chakra-ui/react";
 
 
 
