@@ -8,10 +8,10 @@ import {
   } from "@chakra-ui/react";
   import logo from "../assets/logo.png";
   import { FooterNav } from "../constant/navigation";
-  import { useTranslation } from "react-i18next";
+  //import { useTranslation } from "react-i18next";
   
   const Footer = () => {
-    const { t } = useTranslation();
+    //const { t } = useTranslation();
   
     return (
       <Container minW={"100%"} py={20} backgroundColor={"#051830"} px={10}>
