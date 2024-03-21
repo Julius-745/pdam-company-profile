@@ -29,17 +29,17 @@ import {
                 alt={"Logo"}
                 w={{ base: 24, md: "auto" }}
               />
-              <Text mt={5}>{"Perumdam Tirta Argapura"}</Text>
+              <Text mt={5} color={"white"}>{"Perumdam Tirta Argapura"}</Text>
             </Flex>
-            <Text>Advance your life with comprehensive program together with Perumdam Tirta Argapura</Text>
+            <Text color={"white"}>Advance your life with comprehensive program together with Perumdam Tirta Argapura</Text>
             <Text fontSize={"12px"} color={"white"}>{"Copyright Perumdam Tirta Argapura"}</Text>
           </VStack>
 
           <VStack maxW={"20%"} alignItems={"left"} gap={8}>
             <Text fontSize={"24px"} color={"white"}>Kontak</Text>
-            <Text >perumdam.argapura@gmail.com</Text>
-            <Text >Jl. Raya Dringu, Krajan, Tamansari, Kec. Dringu, Kabupaten Probolinggo, Jawa Timur</Text>
-            <Text >+62 264 2185 605</Text>
+            <Text color={"white"}>perumdam.argapura@gmail.com</Text>
+            <Text color={"white"}>Jl. Raya Dringu, Krajan, Tamansari, Kec. Dringu, Kabupaten Probolinggo, Jawa Timur</Text>
+            <Text color={"white"}>+62 264 2185 605</Text>
           </VStack>
   
           <VStack gap={5} alignItems={"left"} mt={{base:20, md:0}}>
