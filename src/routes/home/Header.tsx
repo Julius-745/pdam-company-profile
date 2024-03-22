@@ -9,7 +9,7 @@ const Banner = () => {
         <HStack gap={20} marginX={5}>
             <Stack gap={5}>
                 <Heading color={"black"}>Perumdam Tirta Argapura</Heading>
-                <Text color={"black"}>Air bersih yang lebih murni dan lebih baik untuk seluruh kebutuhan rumah tangga anda.</Text>
+                <Text color={"black"} maxW={"70%"}>Air bersih yang lebih murni dan lebih baik untuk seluruh kebutuhan rumah tangga atau usaha anda.</Text>
                 <Flex flexDirection={{base: "column", lg: "row"}} gap={10}>
                     <Button color={"black"} colorScheme="blue" variant={"solid"} >Daftar Pemasangan</Button>
                     <Link color={"black"} textDecor={"underline"}>Pelajari Lebih lanjut</Link>
