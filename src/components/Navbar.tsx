@@ -66,7 +66,7 @@ const Navbar: React.FC<INavbar> = ({ data }) => {
                   alt={"Logo"}
                   w={{ base: 24, lg: "auto" }}
                 />
-                <Text color={"black"} fontWeight={"bold"} fontSize={"2xl"}>Perumdam Tirta Argapura</Text>
+                <Text color={"black"} fontWeight={"bold"} fontSize={{base: "xs",lg: "2xl"}}>Perumdam Tirta Argapura</Text>
               </HStack>
               <Stack
                 flex={1}

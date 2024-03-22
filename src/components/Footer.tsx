@@ -19,7 +19,7 @@ import {
           <VStack
             h={"inherit"}
             gap={8}
-            maxW={"20%"}
+            maxW={{base:"", lg: "20%"}}
             alignItems={"left"}
           >
             <Flex>
@@ -35,7 +35,7 @@ import {
             <Text fontSize={"12px"} color={"white"}>{"Copyright Perumdam Tirta Argapura"}</Text>
           </VStack>
 
-          <VStack maxW={"20%"} alignItems={"left"} gap={8}>
+          <VStack maxW={{base:"", lg: "20%"}} alignItems={"left"} gap={8}>
             <Text fontSize={"24px"} color={"white"}>Kontak</Text>
             <Text color={"white"}>perumdam.argapura@gmail.com</Text>
             <Text color={"white"}>Jl. Raya Dringu, Krajan, Tamansari, Kec. Dringu, Kabupaten Probolinggo, Jawa Timur</Text>
