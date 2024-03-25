@@ -1,4 +1,4 @@
-import { Center, Flex, HStack, Text, Stack } from "@chakra-ui/react";
+import { HStack, Text, Stack } from "@chakra-ui/react";
 import {CardNews} from "../../components/CardNews";
 const News = () => {
     return (
