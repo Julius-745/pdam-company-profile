@@ -4,7 +4,7 @@ export const styles: Styles = {
   global: {
     body: {
       fontFamily: "Poppins",
-      color: "chakra-body-text",
+      color: "black",
       bg: "white",
       fontcolor: "black",
       transitionProperty: "background-color",

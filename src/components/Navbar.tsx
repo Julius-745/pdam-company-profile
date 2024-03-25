@@ -28,7 +28,6 @@ const MenuList: React.FC<INavbar> = ({ data }) => {
           <Text
             fontSize="md"
             fontWeight={"500"}
-            color={"black"}
           >
             {item.name}
           </Text>
@@ -66,7 +65,7 @@ const Navbar: React.FC<INavbar> = ({ data }) => {
                   alt={"Logo"}
                   w={{ base: 24, lg: "auto" }}
                 />
-                <Text color={"black"} fontWeight={"bold"} fontSize={{base: "xs",lg: "2xl"}}>Perumdam Tirta Argapura</Text>
+                <Text fontWeight={"bold"} fontSize={{base: "xs",lg: "2xl"}}>Perumdam Tirta Argapura</Text>
               </HStack>
               <Stack
                 flex={1}

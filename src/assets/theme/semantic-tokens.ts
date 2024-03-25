@@ -2,7 +2,7 @@ export const semanticTokens = {
   colors: {
     "chakra-body-text": { _light: "black", _dark: "whiteAlpha.900" },
     "chakra-body-bg": {
-      _light: "white",
+      _light: "black",
       _dark: "linear-gradient(181deg, #1A3150 0.54%, #070626 98.69%)",
     },
     "chakra-border-color": { _light: "gray.200", _dark: "whiteAlpha.300" },

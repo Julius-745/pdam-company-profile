@@ -9,7 +9,7 @@ const direction: ThemeDirection = "ltr";
 const config: ThemeConfig = {
   useSystemColorMode: false,
   initialColorMode: "light",
-  cssVarPrefix: "metaxot",
+  cssVarPrefix: "pdam",
 };
 
 export const theme = {

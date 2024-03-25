@@ -4,10 +4,10 @@ import {MitraData} from "../../constant/mitra";
 const Mitra = () => {
     return (
         <VStack marginTop={"5rem"}>
-            <Text color={"black"}>Mitra Kami</Text>
+            <Text>Mitra Kami</Text>
             <Flex flexDir={{base: "column", lg: "row"}} justifyContent={"space-around"} minW={"90%"} gap={10}>
                 {MitraData.map((item, key) => (
-                    <Image src={item.image} key={key} w={{base: "10rem"}} alignSelf={"center"}/>
+                    <Image src={item.image} key={key} w={{base: "15rem"}} alignSelf={"center"}/>
                 ))}
             </Flex>
         </VStack>
