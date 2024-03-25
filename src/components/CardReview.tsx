@@ -1,4 +1,4 @@
-import { Card, CardHeader, Flex, Avatar, Heading, IconButton, CardBody, CardFooter, Text, Box, Image } from "@chakra-ui/react";
+import { Card, CardHeader, Flex, Avatar, Heading, IconButton, CardBody, CardFooter, Text, Box } from "@chakra-ui/react";
 
 
 export interface IReview {
