@@ -1,9 +1,10 @@
 import Layout from './components/Layout'
 import Aboutus from './routes/home/Aboutus'
-import Banner from './routes/home/Header'
+import Banner from './routes/home/Banner'
 import Mitra from './routes/home/Mitra'
 import News from './routes/home/News'
 import Product from './routes/home/Product'
+import Faq from './routes/home/Faq'
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
       <Product/>
       <News/>
       <Aboutus/>
+      <Faq/>
     </Layout>
   )
 }
