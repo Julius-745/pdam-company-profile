@@ -20,7 +20,7 @@ export const CardReview: React.FC<IReview> = ({image, nama, job, review}) => {
   </CardBody>
 
   <CardFooter>
-  <Flex spacing='4'>
+  <Flex>
       <Flex flex='1' gap='4' alignItems='center' flexWrap='wrap'>
         <Avatar name='Segun Adebayo' src={image || 'https://bit.ly/sage-adebayo'} />
 
