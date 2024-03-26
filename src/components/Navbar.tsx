@@ -14,6 +14,7 @@ import {
 import { INavigation } from "../constant/navigation";
 import MenuDrawer from "./menuDrawer";
 import { useTranslation } from "react-i18next";
+import { Link as URI } from "react-router-dom";
 
 interface INavbar {
   data: INavigation[];
@@ -59,12 +60,14 @@ const Navbar: React.FC<INavbar> = ({ data }) => {
               flex={1}
             >
               <HStack marginRight={"2rem"}>
+                <URI to={"/"}>
                 <Image
                   mx={{ base: 4, lg: 0 }}
                   src={logo}
                   alt={"Logo"}
                   w={{ base: 24, lg: "auto" }}
                 />
+                </URI>
                 <Text fontWeight={"bold"} fontSize={{base: "xs",lg: "2xl"}}>Perumdam Tirta Argapura</Text>
               </HStack>
               <Stack

@@ -1,16 +1,20 @@
 import { Card, CardBody, Stack, Heading, CardFooter, Image, Text, HStack } from "@chakra-ui/react"
+import { Link } from "react-router-dom";
 
 export interface INEWS {
+    id: number;
     image: any;
     title: string;
     description: string;
     looked: number;
     date: string;
+    recomendation?: boolean;
 }
 
-export const CardNews: React.FC<INEWS> = ({image, title, description, looked, date}) => {
+export const CardNews: React.FC<INEWS> = ({id, image, title, description, looked, date, recomendation}) => {
     return (
-        <Card maxW='2xl' backgroundColor={"white"} borderRadius={"lg"} boxShadow={"-8px 5px 12px 0px rgba(0,0,0,0.39)"} margin={"2rem"}>
+      <Link to={`news/${id}`}>
+        <Card w={recomendation ? 'sm' : '2xl'} backgroundColor={"white"} borderRadius={"lg"} boxShadow={"-8px 5px 12px 0px rgba(0,0,0,0.39)"} margin={"2rem"}>
   <CardBody>
     <Image
       src={image}
@@ -35,5 +39,6 @@ export const CardNews: React.FC<INEWS> = ({image, title, description, looked, da
     </HStack>
   </CardFooter>
 </Card>
+</Link>
     )
 }

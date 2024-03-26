@@ -6,7 +6,7 @@ const Banner = () => {
 
     return (
         <Center>
-        <HStack gap={20} marginX={5}>
+        <HStack gap={20} marginX={10}>
             <Stack gap={5}>
                 <Heading >Perumdam Tirta Argapura</Heading>
                 <Text  maxW={"70%"}>Air bersih yang lebih murni dan lebih baik untuk seluruh kebutuhan rumah tangga atau usaha anda.</Text>
@@ -21,7 +21,9 @@ const Banner = () => {
                     </Stack>
                 </Card>
             </Stack>
-            <Stack display={{base: "none", lg: "block"}}><Image src="https://ik.imagekit.io/uavheojaq/PDAM/Company%20Profile/headeroption.png?updatedAt=1710998689064" alt=""/></Stack>
+            <Stack display={{base: "none", lg: "block"}}>
+                <Image src="https://ik.imagekit.io/uavheojaq/PDAM/Company%20Profile/headeroption.png?updatedAt=1710998689064" alt=""/>
+            </Stack>
         </HStack>
         </Center>
     )
