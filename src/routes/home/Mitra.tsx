@@ -3,7 +3,7 @@ import {MitraData} from "../../constant/mitra";
 
 const Mitra = () => {
     return (
-        <VStack marginTop={"5rem"}>
+        <VStack>
             <Text>Mitra Kami</Text>
             <Flex flexDir={{base: "column", lg: "row"}} justifyContent={"space-around"} minW={"90%"} gap={10}>
                 {MitraData.map((item, key) => (

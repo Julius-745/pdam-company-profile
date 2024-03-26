@@ -12,7 +12,7 @@ const Layout: React.FC<ILayout> = (props) => {
   return (
     <Box overflow={"auto"} minW={"100%"}>
       <Navbar data={Navigation} />
-      <Stack mt={60} gap={10}>{props.children}</Stack>
+      <Stack mt={60} gap={"5rem"}>{props.children}</Stack>
       <Footer />
     </Box>
   );
