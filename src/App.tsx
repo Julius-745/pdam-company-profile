@@ -3,7 +3,7 @@ import Aboutus from './routes/home/Aboutus'
 import Banner from './routes/home/Banner'
 import Mitra from './routes/home/Mitra'
 import News from './routes/home/News'
-import Product from './routes/home/Product'
+// import Product from './routes/home/Product'
 import Faq from './routes/home/Faq'
 import Review from './routes/home/Review'
 
@@ -13,7 +13,7 @@ function App() {
     <Layout>
       <Banner/>
       <Mitra/>
-      <Product/>
+      {/* <Product/> */}
       <News/>
       <Aboutus/>
       <Review/>

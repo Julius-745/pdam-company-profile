@@ -7,7 +7,7 @@ const Mitra = () => {
             <Text>Mitra Kami</Text>
             <Flex flexDir={{base: "column", lg: "row"}} justifyContent={"space-around"} minW={"90%"} gap={10}>
                 {MitraData.map((item, key) => (
-                    <Image src={item.image} key={key} w={{base: "15rem"}} alignSelf={"center"}/>
+                    <Image src={item.image} key={key} w={{base: "15rem", lg: "12rem"}} alignSelf={"center"}/>
                 ))}
             </Flex>
         </VStack>

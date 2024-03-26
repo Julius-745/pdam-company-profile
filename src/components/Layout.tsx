@@ -1,4 +1,4 @@
-import { Box } from "@chakra-ui/react";
+import { Box, Stack } from "@chakra-ui/react";
 import React from "react";
 import Navbar from "./Navbar";
 import { Navigation } from "../constant/navigation";
@@ -12,7 +12,7 @@ const Layout: React.FC<ILayout> = (props) => {
   return (
     <Box overflow={"auto"} minW={"100%"}>
       <Navbar data={Navigation} />
-      <Box mt={60}>{props.children}</Box>
+      <Stack mt={60} gap={10}>{props.children}</Stack>
       <Footer />
     </Box>
   );

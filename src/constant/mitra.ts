@@ -1,7 +1,9 @@
 import indo from "../assets/image/indmrt.png";
 import alfa from "../assets/image/alfmrt.png";
 import jatim from "../assets/image/bgJatim.png";
-import bri from "../assets/image/bgBRI.png";
+import dana from "../assets/image/dana.png";
+import shoppe from "../assets/image/shoppe.png";
+import tokopedia from "../assets/image/tokopedia.png";
 
     export interface IMitra {
     name: string;
@@ -22,7 +24,15 @@ import bri from "../assets/image/bgBRI.png";
       image: alfa,
     },
     {
-        name: "bank bri",
-        image: bri,
+        name: "dana",
+        image: dana,
+    },
+    {
+      name: "shoppe",
+      image: shoppe,
+    },
+    {
+      name: "tokopedia",
+      image: tokopedia,
     },
   ];
