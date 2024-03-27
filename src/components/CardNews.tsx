@@ -9,6 +9,7 @@ export interface INEWS {
     looked: number;
     date: string;
     recomendation?: boolean;
+    attributes?: any;
 }
 
 export const CardNews: React.FC<INEWS> = ({id, image, title, description, looked, date, recomendation}) => {
@@ -23,7 +24,7 @@ export const CardNews: React.FC<INEWS> = ({id, image, title, description, looked
     />
     <Stack mt='6' spacing='3'>
       <Heading size='md' color={"black"}>{title}</Heading>
-      <Text color={"black"}>
+      <Text color={"black"} textOverflow={"ellipsis"} wordBreak={"break-word"} overflow={"hidden"} maxHeight="10.6em" lineHeight="1.8em">
       {description}
       </Text>
     </Stack>
