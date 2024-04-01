@@ -56,12 +56,6 @@ dependencies:
   react-router-dom:
     specifier: ^6.22.3
     version: 6.22.3(react-dom@18.2.0)(react@18.2.0)
-  run-if-fn:
-    specifier: link:@/theme/utils/run-if-fn
-    version: link:@/theme/utils/run-if-fn
-  typography:
-    specifier: link:@/theme/foundations/typography
-    version: link:@/theme/foundations/typography
 
 devDependencies:
   '@types/react':
