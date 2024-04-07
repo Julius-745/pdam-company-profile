@@ -25,7 +25,7 @@ const News = () => {
 
     return (
         <Stack>
-        <Text marginX={{base: "2rem", lg: "10rem"}} fontSize={{base:"lg", lg: "4xl"}} fontWeight={"bold"}>Informasi Terkini Terkait Perumdam Tirta Argapura</Text>
+        <Text marginX={{base: "2rem", lg: "10rem"}} fontSize={{base:"lg", lg: "4xl"}} fontWeight={"bold"}>Informasi Terkini Perumdam Tirta Argapura</Text>
         <HStack flexWrap={"wrap"} marginBottom={"5rem"} justifyContent={"center"}>
             {berita?.map((item, idx) => (
             <CardNews 
