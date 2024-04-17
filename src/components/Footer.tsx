@@ -44,8 +44,8 @@ import {
   
           <VStack gap={5} alignItems={"left"} mt={{base:20, md:0}}>
           <Text fontSize={"24px"} color={"white"}>Pelayanan</Text>
-            {FooterNav.map((link) => (
-              <Link display={"block"} href={link.link} color={"#FFBFFC"}>
+            {FooterNav.map((link, idx) => (
+              <Link display={"block"} href={link.link} color={"#FFBFFC"} key={idx}>
                 <Text fontSize={"20px"} color={"white"}>
                   {link.name}
                 </Text>

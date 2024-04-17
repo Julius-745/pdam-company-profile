@@ -10,6 +10,9 @@ export interface INEWS {
     date: string;
     recomendation?: boolean;
     attributes?: any;
+    media_berita?: any;
+    title_berita?: string;
+    content_berita?: string;
 }
 
 export const CardNews: React.FC<INEWS> = ({id, image, title, description, looked, date, recomendation}) => {

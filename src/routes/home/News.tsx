@@ -12,7 +12,7 @@ const News = () => {
     
     const getDatas = () => {
         try {
-            axios.get(baseURL+"/beritas?pagination[page]=1&pagination[pageSize]=2&populate=*")
+            axios.get(baseURL+"/beritas?sort[0]=id:desc&pagination[page]=1&pagination[pageSize]=2&populate=*")
             .then((response) => setBerita(response.data.data))
         } catch (error) {
             console.log("error log", error)
@@ -31,9 +31,9 @@ const News = () => {
             <CardNews 
                 key={idx}
                 id={idx}
-                title={item.attributes.title_berita} 
-                description={item.attributes.content_berita} 
-                image={imageURL+item.attributes.media_berita.data.attributes.url}
+                title={item.attributes?.title_berita} 
+                description={item.attributes?.content_berita} 
+                image={imageURL+item.attributes.media_berita.data?.attributes.url === `${imageURL}undefined` ?  "https://picsum.photos/800/480" : imageURL+item.attributes.media_berita.data?.attributes.url}
                 looked={10}
                 date={item.attributes.createdAt}
                 />

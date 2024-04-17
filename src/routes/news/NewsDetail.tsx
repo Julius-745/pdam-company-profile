@@ -1,35 +1,38 @@
 import { Stack, HStack, Text, Image, Heading } from "@chakra-ui/react"
-import { CardNews } from "../../components/CardNews"
+import { CardNews, INEWS } from "../../components/CardNews"
 import Layout from "../../components/Layout"
-
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 const NewsDetail = () => {
+    const[berita, setBerita] = useState<INEWS>();
+    const id = Number(window.location.href.split("/").pop());
+
+    const baseURL = import.meta.env.VITE_API_URL
+    const imageURL = import.meta.env.VITE_IMAGE_URL
+    
+    const getDatas = () => {
+        try {
+            axios.get(baseURL+`/beritas/${id+1}?populate=*`)
+            .then((response) => setBerita(response.data.data.attributes))
+        } catch (error) {
+            console.log("error log", error)
+        }
+    }
+
+    useEffect(() => {
+        getDatas()
+    }, [])
+
     return (
         <Layout>
-            <Stack marginX={"9rem"}>
-                <Image src="https://ik.imagekit.io/uavheojaq/PDAM/Company%20Profile/dummyBanner.png?updatedAt=1711431058758" alt=""/>
+            <Stack marginX={{base: "1rem",lg: "9rem"}}>
+                <Image src={imageURL+berita?.media_berita?.data.attributes.url == `${imageURL}undefined` ?  "https://picsum.photos/800/480" : imageURL+berita?.media_berita.data?.attributes.url} alt=""/>
             </Stack>
-            <Stack marginX={"8rem"}>
-                <Heading>Perumdam Droping Air Bersih Ke Rumah Warga</Heading>
-                <Text textAlign={"justify"} lineHeight={"2rem"}><b>WONOMERTO, Radar Bromo -</b> Perumdam Tirta Argapura tidak diam saja menyikapi ribuan pelanggannya yang kesulitan air bersih.
-                Petugas Perumdam langsung droping air bersih ke ribuan pelanggan di sejumlah desa yang kesulitan air bersih akibat hancurnya beberapa jaringan pipa air bersih di Sukapura.
-
-                Bahkan, untuk mempermudah droping air bersih, dibangun terminal air di Desa Patalan, Kecamatan Wonomerto.
-
-                Dengan cara ini, truk tangki yang akan dropping air bersih bisa mengambil air lebih dekat. Sehingga, distribusi air bersih pada warga pun bisa lebih cepat.
-                Kabag Teknik Perumdam Tirta Argapura Kabupaten Probolinggo, Hari Supriyanto menjelaskan, rusaknya jaringan pipa air bersih di sumber mata air Umbulan membuat sekitar seribu pelanggan Unit Patalan berdampak.
-                Pelayanan air mati total ke pelanggan di Unit Patalan. Kemudian, sekitar 300 pelanggan di Unit Bantaran dan 200 pelanggan di Unit Sukapura ikut terdampak.
-                Ratusan pelanggan ini juga tidak bisa menikmati aliran air bersih akibat putusnya pipa.
-                Karena kondisi itu, sejak Kamis (29/2) pihaknya droping air bersih tiap hari menggunakan truk tangki ke pelanggan yang terdampak.
-
-                Air diambil dari Desa Banjarsawah, Kecamatan Tegalsiwalan. Lokasinya cukup jauh. Karena itu, sehari hanya mampu droping air bersih dua kali saja.
-                Untuk mempercepat penyaluran air bersih, Perumdam membuat terminal air di Patalan.
-
-                Dengan begitu, pengambilan air bersih dengan truk tangki bisa lebih dekat dan lebih cepat droping ke warga.
-                Paling tidak, sehari bisa empat kali atau lebih droping air bersih ke pelanggan yang membutuhkan. 
-                Selain itu, pihaknya juga sudah koordinasi dengan BPBD Kabupaten Probolinggo untuk membantu droping air bersih pada pelanggan PDAM yang terdampak.
-                Sehingga, semua pelanggan yang kesulitan air bersih bisa tetap mendapat air bersih.
-                ”Selama pelayanan air bersih mati total atau terganggu, kami berupaya terus droping air bersih menggunakan truk tangki. Sehingga masyarakat (pelanggan Perumdam, red), tidak sampai krisis air bersih,” terangnya. (mas/hn)
+            <Stack marginX={{base: "2rem", lg: "8rem"}}>
+                <Heading>{berita?.title_berita}</Heading>
+                <Text textAlign={"justify"} lineHeight={"2rem"}>
+                    {berita?.content_berita}
                 </Text>
             </Stack>
         <Stack>
