@@ -27,7 +27,7 @@ const NewsDetail = () => {
     return (
         <Layout>
             <Stack marginX={{base: "1rem",lg: "9rem"}}>
-                <Image src={imageURL+berita?.media_berita?.data.attributes.url == `${imageURL}undefined` ?  "https://picsum.photos/800/480" : imageURL+berita?.media_berita.data?.attributes.url} alt=""/>
+                <Image src={imageURL+berita?.media_berita?.data?.attributes?.url == `${imageURL}undefined` ?  "https://picsum.photos/800/280" : imageURL+berita?.media_berita.data?.attributes?.url} alt=""/>
             </Stack>
             <Stack marginX={{base: "2rem", lg: "8rem"}}>
                 <Heading>{berita?.title_berita}</Heading>
