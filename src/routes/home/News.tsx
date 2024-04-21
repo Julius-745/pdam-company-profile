@@ -1,39 +1,25 @@
 import { HStack, Text, Stack } from "@chakra-ui/react";
 import {CardNews} from "../../components/CardNews";
-import axios from "axios";
-import { useEffect, useState } from "react";
-import { INEWS } from "../../components/CardNews";
+import useFetchData from '../../hook/fetchdata';
+import axiosMedia from '../../hook/AxiosMedia';
 
 const News = () => {
-    const[berita, setBerita] = useState<[INEWS]>();
+    const {
+        data,
+        loading,
+      } = useFetchData("/api/beritas?sort[0]=id:desc&pagination[page]=1&pagination[pageSize]=2&populate=*");
 
-    const baseURL = import.meta.env.VITE_API_URL
-    const imageURL = import.meta.env.VITE_IMAGE_URL
-    
-    const getDatas = () => {
-        try {
-            axios.get(baseURL+"/beritas?sort[0]=id:desc&pagination[page]=1&pagination[pageSize]=2&populate=*")
-            .then((response) => setBerita(response.data.data))
-        } catch (error) {
-            console.log("error log", error)
-        }
-    }
-
-    useEffect(() => {
-        getDatas()
-    }, [])
-
-    return (
+      return (
         <Stack>
         <Text marginX={{base: "2rem", lg: "10rem"}} fontSize={{base:"lg", lg: "4xl"}} fontWeight={"bold"}>Informasi Terkini Terkait Perumdam Tirta Argapura</Text>
         <HStack flexWrap={"wrap"} marginBottom={"5rem"} justifyContent={"center"}>
-            {berita?.map((item, idx) => (
+            {!loading && data.map((item, idx) => (
             <CardNews 
                 key={idx}
                 id={idx}
-                title={item.attributes?.title_berita} 
-                description={item.attributes?.content_berita} 
-                image={imageURL+item.attributes.media_berita.data?.attributes.url === `${imageURL}undefined` ?  "https://picsum.photos/800/480" : imageURL+item.attributes.media_berita.data?.attributes.url}
+                title={item.attributes?.title_data} 
+                description={item.attributes?.content_data} 
+                image={axiosMedia+item.attributes.media_data.data?.attributes.url }
                 looked={10}
                 date={item.attributes.createdAt}
                 />
