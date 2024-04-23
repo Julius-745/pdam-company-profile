@@ -1,38 +1,27 @@
 import { Stack, HStack, Text, Image, Heading } from "@chakra-ui/react"
-import { CardNews, INEWS } from "../../components/CardNews"
+import { CardNews } from "../../components/CardNews"
 import Layout from "../../components/Layout"
-import { useEffect, useState } from "react";
-import axios from "axios";
+import useFetchData from "../../hook/fetchdata";
+
 
 const NewsDetail = () => {
-    const[berita, setBerita] = useState<INEWS>();
     const id = Number(window.location.href.split("/").pop());
+    const {data, loading} = useFetchData(`/api/beritas/${id+1}?populate=*`)
 
-    const baseURL = import.meta.env.VITE_API_URL
     const imageURL = import.meta.env.VITE_IMAGE_URL
-    
-    const getDatas = () => {
-        try {
-            axios.get(baseURL+`/beritas/${id+1}?populate=*`)
-            .then((response) => setBerita(response.data.data.attributes))
-        } catch (error) {
-            console.log("error log", error)
-        }
-    }
-
-    useEffect(() => {
-        getDatas()
-    }, [])
 
     return (
         <Layout>
             <Stack marginX={{base: "1rem",lg: "9rem"}}>
-                <Image src={imageURL+berita?.media_berita?.data?.attributes?.url == `${imageURL}undefined` ?  "https://picsum.photos/800/280" : imageURL+berita?.media_berita.data?.attributes?.url} alt=""/>
+                {/* @ts-ignore */}
+                <Image fallbackSrc="https://picsum.photos/800/280" src={!loading && imageURL+data.attributes.media?.data?.attributes?.url} alt=""/> 
             </Stack>
             <Stack marginX={{base: "2rem", lg: "8rem"}}>
-                <Heading>{berita?.title_berita}</Heading>
+                {/* @ts-ignore */}
+                <Heading>{!loading && data.attributes.title_berita}</Heading>
                 <Text textAlign={"justify"} lineHeight={"2rem"}>
-                    {berita?.content_berita}
+                    {/* @ts-ignore */}
+                    {!loading && data.attributes.content_berita}
                 </Text>
             </Stack>
         <Stack>

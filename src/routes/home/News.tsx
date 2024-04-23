@@ -10,9 +10,6 @@ const News = () => {
       } = useFetchData("/api/beritas?sort[0]=id:desc&pagination[page]=1&pagination[pageSize]=2&populate=*");
 
 
-      console.log("data", data)
-
-
       return (
         <Stack>
         <Text marginX={{base: "2rem", lg: "10rem"}} fontSize={{base:"lg", lg: "4xl"}} fontWeight={"bold"}>Informasi Terkini Terkait Perumdam Tirta Argapura</Text>
