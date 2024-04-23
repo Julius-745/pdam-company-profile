@@ -24,7 +24,7 @@ export const CardNews: React.FC<INEWS> = ({id, image, title, description, looked
       src={image}
       alt='Green double couch with wooden legs'
       borderRadius='lg'
-      fallbackSrc='https://via.placeholder.com/400'
+      fallbackSrc='https://picsum.photos/650/300?grayscale&blur=2'
     />
     <Stack mt='6' spacing='3'>
       <Heading size='md' color={"black"}>{title}</Heading>
